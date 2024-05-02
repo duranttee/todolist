@@ -1,3 +1,4 @@
+import PropTypes from  "prop-types"
 const ShowItemModal = ({task}) => {
     return(
         <div className="modal fade" id={"showItemModal"+task.id}>
@@ -48,6 +49,10 @@ const ShowItemModal = ({task}) => {
             </div>
         </div>
     )
+}
+
+ShowItemModal.propTypes = {
+    task: PropTypes.object.isRequired,
 }
 
 export default ShowItemModal
